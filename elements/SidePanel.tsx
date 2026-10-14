@@ -11,8 +11,8 @@ export default function SidePanel({ props, onLinkClick }: {props:Props, onLinkCl
 
   const {isOpen, toggle} = sidePanelOpen()
 
-  const handleClick = (e:React.MouseEvent<HTMLElement>) => {
-    const text = e.currentTarget.textContent?.trim();
+  const handleClick = (e) => {
+    const text = e.target.textContent?.trim();
     console.log(text)
 
     if (text && onLinkClick) {
